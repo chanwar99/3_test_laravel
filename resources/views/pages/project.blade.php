@@ -70,7 +70,7 @@
                                     <th>Client</th>
                                     <th>Project Start</th>
                                     <th>Project End</th>
-                                    <th>Project Status</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                         </table>
@@ -188,14 +188,14 @@
                             data: 'project_start',
                             name: 'project_start',
                             render: function($data) {
-                                return moment($data).format('DD MMMM YYYY')
+                                return moment($data).format('DD MMM YYYY')
                             },
                         },
                         {
                             data: 'project_end',
                             name: 'project_end',
                             render: function($data) {
-                                return moment($data).format('DD MMMM YYYY')
+                                return moment($data).format('DD MMM YYYY')
                             },
                         },
                         {
