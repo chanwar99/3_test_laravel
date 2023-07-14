@@ -23,58 +23,7 @@
         <div class="content">
             <div class="card">
                 <div class="card-body">
-                    <form id="filter-form">
-                        <div class="row align-items-end">
-                            <div class="form-group col-md-3">
-                                <label>Project Name</label>
-                                <input type="text" name="project_name" class="form-control" placeholder="Project Name">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label>Client</label>
-                                <select name="client_id" class="form-control">
-                                    <option value="">-- All Client --</option>
-                                    @foreach ($clients as $client)
-                                        <option value="{{ $client->client_id }}">{{ $client->client_name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label>Status</label>
-                                <select name="project_status" class="form-control">
-                                    <option value="">-- All Status --</option>
-                                    <option value="OPEN">OPEN</option>
-                                    <option value="DOING">DOING</option>
-                                    <option value="DONE">DONE</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3 ">
-                                <button type="submit" class="btn btn-primary">Search</button>
-                                <button type="button" id="reset-filter" class="btn btn-secondary">Clear</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createEditModal"
-                            data-action="add">
-                            New
-                        </button>
-                        <button type="submit" class="btn btn-danger" id="deleteSelectedButton">Delete</button>
-                    </div>
-                    <div class="table-responsive">
-                        <table id="project-table" class="table table-bordered table-striped mt-4 text-nowrap w-100">
-                            <thead>
-                                <tr>
-                                    <th><input type="checkbox" id="check-all"></th>
-                                    <th>Action</th>
-                                    <th>Project Name</th>
-                                    <th>Client</th>
-                                    <th>Project Start</th>
-                                    <th>Project End</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                    ini user
                 </div>
                 <!-- /.card-body -->
             </div>

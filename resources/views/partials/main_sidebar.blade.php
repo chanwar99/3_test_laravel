@@ -15,11 +15,31 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
+                    <a href="/" class="nav-link {{ $page == 'home' ? 'active' : '' }}">
+                        <i class="nav-icon fa fa-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                @if ($user->role == 1)
+                    <li class="nav-item">
+                        <a href="/user" class="nav-link {{ $page == 'user' ? 'active' : '' }}">
+                            <i class="nav-icon fa fa-user"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
+                @endif
+                <li class="nav-item">
+                    <a href="/transaksi" class="nav-link {{ $page == 'transaksi' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-money-bill"></i>
+                        <p>Transaksi</p>
+                    </a>
+                </li>
+                {{-- <li class="nav-item">
                     <a href="/" class="nav-link {{ $page == 'project' ? 'active' : '' }}">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>Project</p>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

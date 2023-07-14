@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientsTable extends Migration
+class CreateMerchantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_m_client', function (Blueprint $table) {
-            $table->id('client_id');
-            $table->string('client_name', 255);
-            $table->string('client_address', 255);
+        Schema::create('merchants', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->text('alamat');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_m_client');
+        Schema::dropIfExists('merchants');
     }
 }
